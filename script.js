@@ -35,19 +35,19 @@ function generatePassword() {
     // setting out the password length between 8 and 128.
 
     if (passwordLength < 8 || passwordLength > 128){
-        alert("password needs to be between 8 and 128");
+        alert("password length needs to be between 8 and 128 characters");
         return;
     }
 
     // Getting the user to confirm characters they want included in their password.
 
-    var hasLowercaseLetters = confirm('Click Ok to include lowercase character');
+    var hasLowercaseLetters = confirm('Click Ok to include lowercase characters');
 
-    var hasNumbers = confirm('Click Ok to include numbers character');
+    var hasNumbers = confirm('Click Ok to include number characters');
    
-    var hasUppercaseLetters = confirm('Click Ok to include uppercase character');
+    var hasUppercaseLetters = confirm('Click Ok to include uppercase characters');
     
-    var hasSpecialCharacters = confirm('Click Ok to include special character');
+    var hasSpecialCharacters = confirm('Click Ok to include special characters');
 
     // Creating an array with a variable name possibleCharacters which the user's choices.
     var possibleCharacters = [];
@@ -100,6 +100,6 @@ function generatePassword() {
     for (var i = 0; i < guranteedPassword.length; i++) {
         password [i]= guranteedPassword[i];
     }
-    
+
     return password.join('');
 };
